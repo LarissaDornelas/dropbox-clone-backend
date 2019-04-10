@@ -7,7 +7,7 @@ const cors = require('cors');
 const app = express(); // a const app vai guardar todas as informações da aplicação
 app.use(cors());
 
-const server = require('http').server(app);
+const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
 io.on('connection', socket => {
